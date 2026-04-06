@@ -39,19 +39,23 @@ h1 {
 
 .palette {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px; /* Espacio entre círculos */
     margin-top: 20px;
+    max-width: 400px; /* Ajustado para que entren 3 círculos */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .color-box {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 120px; /* Ancho del círculo */
+    height: 100px; /* Altura del círculo */
+    border-radius: 50%; /* Bordes redondeados */
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: bold;
+    flex-shrink: 0;
 }
