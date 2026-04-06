@@ -37,8 +37,9 @@ function generatePalette() {
 
     for (let i = 0; i < size; i++) {
         const colorHex = getRandomColorHex();
+        const colorHSL = hexToHSL(colorHex);
 
-        // Contenedor para círculo + código
+        // Contenedor para círculo + códigos
         const colorContainer = document.createElement('span');
         colorContainer.className = 'color-container';
 
@@ -47,14 +48,20 @@ function generatePalette() {
         box.className = 'color-box';
         box.style.backgroundColor = colorHex;
 
-        // Código hex debajo
+        // Código hex
         const colorCodeHex = document.createElement('span');
         colorCodeHex.className = 'color-code';
         colorCodeHex.textContent = colorHex;
 
+        // Código HSL
+        const colorCodeHSL = document.createElement('span');
+        colorCodeHSL.className = 'color-code hsl';
+        colorCodeHSL.textContent = colorHSL;
+
         // Armar estructura
         colorContainer.appendChild(box);
         colorContainer.appendChild(colorCodeHex);
+        colorContainer.appendChild(colorCodeHSL);
         paletteDiv.appendChild(colorContainer);
     }
 }

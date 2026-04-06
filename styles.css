@@ -41,7 +41,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* Aumentar espacio entre círculos */
+    gap: 30px; /* Espacio entre círculos */
     margin-top: 20px;
     max-width: 600px; /* Ajustado para que entren 3 círculos más grandes */
     margin-left: auto;
@@ -68,9 +68,19 @@ h1 {
 }
 
 .color-code {
-    margin-top: 10px; /* Espacio entre el círculo y el código */
-    font-size: 16px; /* Aumentar tamaño de la fuente */
+    margin-top: 10px;
+    font-size: 16px;
     font-family: monospace;
-    color: #333;
+    color: #000000; /* Negro fuerte para hex */
     text-align: center;
+    font-weight: 900; /* Letra bien ancha */
+    text-transform: uppercase; /* Convertir a mayúsculas */
+}
+
+
+.color-code.hsl {
+    color: #777777; /* Gris suave para HSL */
+    text-transform: uppercase; /* Mayúsculas */
+    margin-top: 4px;
+    font-size: 14px;
 }
