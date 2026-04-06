@@ -37,17 +37,25 @@ function generatePalette() {
 
     for (let i = 0; i < size; i++) {
         const colorHex = getRandomColorHex();
-        const colorHSL = hexToHSL(colorHex);
 
-        const box = document.createElement('section');
+        // Contenedor para círculo + código
+        const colorContainer = document.createElement('span');
+        colorContainer.className = 'color-container';
+
+        // Círculo
+        const box = document.createElement('span');
         box.className = 'color-box';
         box.style.backgroundColor = colorHex;
 
+        // Código hex debajo
         const colorCodeHex = document.createElement('span');
+        colorCodeHex.className = 'color-code';
         colorCodeHex.textContent = colorHex;
 
-        box.appendChild(colorCodeHex);
-        paletteDiv.appendChild(box);
+        // Armar estructura
+        colorContainer.appendChild(box);
+        colorContainer.appendChild(colorCodeHex);
+        paletteDiv.appendChild(colorContainer);
     }
 }
 

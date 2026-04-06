@@ -41,16 +41,23 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espacio entre círculos */
+    gap: 40px; /* Aumentar espacio entre círculos */
     margin-top: 20px;
-    max-width: 400px; /* Ajustado para que entren 3 círculos */
+    max-width: 600px; /* Ajustado para que entren 3 círculos más grandes */
     margin-left: auto;
     margin-right: auto;
 }
 
+.color-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
 .color-box {
-    width: 120px; /* Ancho del círculo */
-    height: 100px; /* Altura del círculo */
+    width: 150px; /* Aumentar ancho del círculo */
+    height: 150px; /* Aumentar altura del círculo */
     border-radius: 50%; /* Bordes redondeados */
     display: flex;
     align-items: center;
@@ -58,4 +65,12 @@ h1 {
     color: white;
     font-weight: bold;
     flex-shrink: 0;
+}
+
+.color-code {
+    margin-top: 10px; /* Espacio entre el círculo y el código */
+    font-size: 16px; /* Aumentar tamaño de la fuente */
+    font-family: monospace;
+    color: #333;
+    text-align: center;
 }
