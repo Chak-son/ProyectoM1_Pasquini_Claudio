@@ -13,13 +13,18 @@ Desarrollado por **Chakson** | Hecho con ❤️
 
 ---
 
+---
+
 ## 📂 Estructura del Proyecto
 
-**Colorfly-Studio/** ┣ 📄 **index.html** — Estructura semántica (HTML5)  
-┣ 🎨 **styles.css** — Estilos y animaciones (CSS3)  
-┣ ⚡ **script.js** — Lógica y persistencia (JS ES6+)  
-┣ 📸 **foto.png** — Imagen de previsualización  
-┗ 📖 **README.md** — Documentación del proyecto
+* 📁 **Colorfly-Studio/**
+    * ┣ 📄 **index.html** — Estructura semántica (HTML5)
+    * ┣ 🎨 **styles.css** — Estilos y animaciones (CSS3)
+    * ┣ ⚡ **script.js** — Lógica y persistencia (JS ES6+)
+    * ┣ 📸 **foto.png** — Imagen de previsualización
+    * ┗ 📖 **README.md** — Documentación del proyecto
+
+---
 
 ---
 
