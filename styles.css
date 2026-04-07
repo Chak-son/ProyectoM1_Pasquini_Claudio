@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 
-/* --- 2. CABECERA Y LOGO --- */
+/* --- 2. CABECERA Y LOGO (Margen superior izquierdo) --- */
 header { 
     padding: 20px 40px 0px 40px; 
     text-align: left;
@@ -55,7 +55,7 @@ h1 {
     margin: 15px 0; 
 }
 
-/* --- 4. CONTROLES --- */
+/* --- 4. CONTROLES (Menú y Botón) --- */
 .controls { margin-bottom: 20px; }
 
 .size-list { 
@@ -92,18 +92,18 @@ h1 {
     font-weight: 600; 
     font-size: 1.1rem;
     cursor: pointer; 
-    margin-top: 20px;
     transition: 0.3s;
 }
 
-#saveBtn { background: #2c3e50; margin-bottom: 40px; }
+#genBtn { margin-top: 20px; }
+#saveBtn { background: #2c3e50; margin: 40px 0; }
 
 #genBtn:hover, #saveBtn:hover { 
     background: #3b4560; 
     transform: translateY(-2px);
 }
 
-/* --- MEJORA DE ACCESIBILIDAD (Quitar recuadro al click) --- */
+/* --- NUEVO: MEJORA DE ACCESIBILIDAD (Quitar recuadro al click) --- */
 button:focus, label:focus, input:focus {
     outline: none;
 }
@@ -111,7 +111,7 @@ button:focus-visible {
     outline: 2px solid #2c3e50;
 }
 
-/* --- 5. PALETA Y TARJETAS --- */
+/* --- 5. PALETA Y TARJETAS (¡SECCIÓN CORREGIDA!) --- */
 .palette { 
     display: flex; 
     flex-wrap: wrap; 
@@ -137,13 +137,35 @@ button:focus-visible {
     border: 5px solid white;
 }
 
-.hex-code { 
-    margin-top: 15px; 
-    font-family: monospace; 
-    font-weight: bold; 
-    font-size: 1.2rem; 
+/* --- Ajuste para los textos copiables --- */
+.hex-code, .hsl-code { 
+    cursor: pointer; /* <--- Agregado: manito */
+    transition: 0.2s; 
+    padding: 4px 8px; 
+    border-radius: 4px;
+    font-family: monospace;
 }
 
+.hex-code { 
+    margin-top: 15px; /* Espacio bajo el círculo */
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    color: #333;
+}
+
+.hsl-code { 
+    color: #555; 
+    font-size: 0.9rem; 
+    margin-top: 5px; /* Espacio bajo el HEX */
+}
+
+/* Efecto hover sobre los textos copiables */
+.hex-code:hover, .hsl-code:hover { 
+    background: rgba(0, 0, 0, 0.05); 
+    transform: scale(1.05);
+}
+
+/* BOTÓN DE BLOQUEO */
 .lock-btn { 
     border: none; 
     background: white; 
@@ -151,14 +173,24 @@ button:focus-visible {
     height: 40px; 
     border-radius: 50%; 
     cursor: pointer; 
-    margin-top: 15px; 
+    margin-top: 15px; /* Espacio bajo el HSL */
     box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+    font-size: 1.2rem; 
+    transition: 0.2s;
 }
 
-.color-card.is-locked .color-box { border: 6px solid #2c3e50; transform: scale(0.85); }
-.color-card.is-locked .lock-btn { background: #2c3e50; color: white; }
+/* ESTADO BLOQUEADO */
+.color-card.is-locked .color-box { 
+    border: 6px solid #2c3e50; 
+    transform: scale(0.85); 
+}
 
-/* --- 6. SECCIÓN DE GUARDADOS --- */
+.color-card.is-locked .lock-btn { 
+    background: #2c3e50; 
+    color: white; 
+}
+
+/* --- 6. SECCIÓN DE GUARDADOS (Aparte) --- */
 aside {
     background: rgba(255, 255, 255, 0.4);
     padding: 30px;
@@ -205,4 +237,8 @@ aside {
 .delete-btn:hover { transform: scale(1.2); }
 
 /* --- 7. PIE DE PÁGINA --- */
-footer { padding: 60px; color: #2c3e50; opacity: 0.8; }
+footer { 
+    padding: 60px; 
+    color: #2c3e50; 
+    opacity: 0.8;
+}
