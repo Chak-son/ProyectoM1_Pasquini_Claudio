@@ -2,8 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Colorfly Studio | Base</title>
+    <title>Colorfly Studio | Generador Pro</title>
 </head>
 <body>
     <header>
@@ -18,7 +22,7 @@
         <h1>Generador de Colores</h1>
 
         <section class="controls">
-            <p class="instruction-text">Selecciona el tamaño:</p>
+            <p class="instruction-text">Selecciona el tamaño de la paleta:</p>
             <ul class="size-list">
                 <li><input type="radio" id="s6" name="size" value="6" checked><label for="s6">6</label></li>
                 <li><input type="radio" id="s8" name="size" value="8"><label for="s8">8</label></li>
@@ -28,16 +32,18 @@
         </section>
 
         <section id="palette" class="palette"></section>
+        
+        <button id="saveBtn">Guardar Paleta Actual</button>
+
+        <aside id="savedSection">
+            <h3>Paletas Guardadas</h3>
+            <ul id="savedList"></ul>
+        </aside>
     </main>
 
-    <button id="saveBtn">Guardar Paleta Actual</button>
-
-    <aside id="savedSection">
-        <h3>Paletas Guardadas</h3>
-        <ul id="savedList"></ul>
-    </aside>
-
-    <footer><p>© 2026 Colorfly Studio</p></footer>
+    <footer>
+        <p>© 2026 Colorfly Studio</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
