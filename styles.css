@@ -55,7 +55,7 @@ h1 {
     margin: 15px 0; 
 }
 
-/* --- 4. CONTROLES (BOTONES Y RADIOS) --- */
+/* --- 4. CONTROLES --- */
 .controls { margin-bottom: 20px; }
 
 .size-list { 
@@ -72,7 +72,7 @@ h1 {
     background: white; 
     padding: 10px 20px; 
     border-radius: 25px; 
-    cursor: pointer; /* <--- Agregado: cursor de manito */
+    cursor: pointer; 
     font-weight: bold; 
     transition: 0.3s;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -83,7 +83,7 @@ h1 {
     color: white; 
 }
 
-#genBtn { 
+#genBtn, #saveBtn { 
     background: #4a5673; 
     color: white; 
     border: none; 
@@ -91,22 +91,22 @@ h1 {
     padding: 15px 35px; 
     font-weight: 600; 
     font-size: 1.1rem;
-    cursor: pointer; /* <--- Agregado: cursor de manito */
+    cursor: pointer; 
     margin-top: 20px;
     transition: 0.3s;
 }
 
-#genBtn:hover { 
+#saveBtn { background: #2c3e50; margin-bottom: 40px; }
+
+#genBtn:hover, #saveBtn:hover { 
     background: #3b4560; 
     transform: translateY(-2px);
 }
 
-/* --- NUEVO: MEJORA DE ACCESIBILIDAD (Quitar recuadro al click) --- */
+/* --- MEJORA DE ACCESIBILIDAD (Quitar recuadro al click) --- */
 button:focus, label:focus, input:focus {
     outline: none;
 }
-
-/* Si alguien usa el teclado (Tab), el recuadro sigue apareciendo por seguridad */
 button:focus-visible {
     outline: 2px solid #2c3e50;
 }
@@ -142,44 +142,67 @@ button:focus-visible {
     font-family: monospace; 
     font-weight: bold; 
     font-size: 1.2rem; 
-    color: #333;
 }
 
-.hsl-code { 
-    color: #555; 
-    font-size: 0.9rem; 
-    margin-top: 5px; 
-}
-
-/* BOTÓN DE BLOQUEO */
 .lock-btn { 
     border: none; 
     background: white; 
     width: 40px; 
     height: 40px; 
     border-radius: 50%; 
-    cursor: pointer; /* <--- Agregado: cursor de manito */
+    cursor: pointer; 
     margin-top: 15px; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
-    font-size: 1.2rem; 
+}
+
+.color-card.is-locked .color-box { border: 6px solid #2c3e50; transform: scale(0.85); }
+.color-card.is-locked .lock-btn { background: #2c3e50; color: white; }
+
+/* --- 6. SECCIÓN DE GUARDADOS --- */
+aside {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+#savedList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.saved-item {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.mini-palette { display: flex; gap: 6px; }
+
+.mini-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
     transition: 0.2s;
 }
 
-/* ESTADO BLOQUEADO */
-.color-card.is-locked .color-box { 
-    border: 6px solid #2c3e50; 
-    transform: scale(0.85); 
-}
+.delete-btn:hover { transform: scale(1.2); }
 
-.color-card.is-locked .lock-btn { 
-    background: #2c3e50; 
-    color: white; 
-}
-
-/* --- 6. PIE DE PÁGINA --- */
-footer { 
-    padding: 60px; 
-    color: #2c3e50; 
-    font-size: 0.9rem; 
-    opacity: 0.8;
-}
+/* --- 7. PIE DE PÁGINA --- */
+footer { padding: 60px; color: #2c3e50; opacity: 0.8; }

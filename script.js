@@ -1,12 +1,14 @@
 const palette = document.getElementById('palette');
 const genBtn = document.getElementById('genBtn');
+const saveBtn = document.getElementById('saveBtn');
+const savedList = document.getElementById('savedList');
 
-// Generar color HEX aleatorio
+// 1. Generar color HEX aleatorio
 function getHex() {
     return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
 }
 
-// Convertir HEX a HSL
+// 2. Convertir HEX a HSL (para info extra)
 function getHSL(hex) {
     let r = parseInt(hex.slice(1, 3), 16) / 255, g = parseInt(hex.slice(3, 5), 16) / 255, b = parseInt(hex.slice(5, 7), 16) / 255;
     let max = Math.max(r, g, b), min = Math.min(r, g, b), h, s, l = (max + min) / 2;
@@ -22,7 +24,7 @@ function getHSL(hex) {
     return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
 }
 
-// Crear o actualizar el contenido de una tarjeta
+// 3. Crear o actualizar el contenido de una tarjeta (con candado)
 function actualizarTarjeta(card, color) {
     const hsl = getHSL(color);
     card.innerHTML = `
@@ -32,7 +34,6 @@ function actualizarTarjeta(card, color) {
         <button class="lock-btn">🔓</button>
     `;
 
-    // Configurar el botón de bloqueo
     const lockBtn = card.querySelector('.lock-btn');
     lockBtn.onclick = () => {
         card.classList.toggle('is-locked');
@@ -40,12 +41,11 @@ function actualizarTarjeta(card, color) {
     };
 }
 
-// Función principal de generación
+// 4. Función principal: Dibujar la paleta
 function dibujar() {
     const num = document.querySelector('input[name="size"]:checked').value;
     const tarjetasExistentes = palette.querySelectorAll('.color-card');
 
-    // Si el usuario cambió el tamaño (ej. de 6 a 8), borramos y recreamos
     if (tarjetasExistentes.length != num) {
         palette.innerHTML = '';
         for (let i = 0; i < num; i++) {
@@ -55,7 +55,6 @@ function dibujar() {
             palette.appendChild(card);
         }
     } else {
-        // Si el tamaño es el mismo, solo cambiamos los que no tienen candado
         tarjetasExistentes.forEach(card => {
             if (!card.classList.contains('is-locked')) {
                 actualizarTarjeta(card, getHex());
@@ -64,5 +63,51 @@ function dibujar() {
     }
 }
 
+// 5. GUARDAR PALETA
+saveBtn.onclick = () => {
+    const colores = [];
+    palette.querySelectorAll('.hex-code').forEach(el => colores.push(el.textContent));
+    
+    const guardados = JSON.parse(localStorage.getItem('misPaletas') || '[]');
+    guardados.push(colores);
+    localStorage.setItem('misPaletas', JSON.stringify(guardados));
+    
+    mostrarGuardados();
+};
+
+// 6. MOSTRAR GUARDADOS
+function mostrarGuardados() {
+    const guardados = JSON.parse(localStorage.getItem('misPaletas') || '[]');
+    savedList.innerHTML = '';
+
+    guardados.forEach((paleta, index) => {
+        const li = document.createElement('li');
+        li.className = 'saved-item';
+        
+        // Crear mini vista previa
+        let miniColores = '';
+        paleta.forEach(c => miniColores += `<span class="mini-dot" style="background:${c}"></span>`);
+        
+        li.innerHTML = `
+            <small>Paleta #${index + 1}</small>
+            <nav class="mini-palette">${miniColores}</nav>
+            <button class="delete-btn" onclick="borrarPaleta(${index})">🗑️</button>
+        `;
+        savedList.appendChild(li);
+    });
+}
+
+// 7. BORRAR GUARDADO
+window.borrarPaleta = (index) => {
+    const guardados = JSON.parse(localStorage.getItem('misPaletas') || '[]');
+    guardados.splice(index, 1);
+    localStorage.setItem('misPaletas', JSON.stringify(guardados));
+    mostrarGuardados();
+};
+
+// Eventos de inicio
 genBtn.onclick = dibujar;
-window.onload = dibujar;
+window.onload = () => {
+    dibujar();
+    mostrarGuardados();
+};
