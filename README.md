@@ -15,6 +15,7 @@ Desarrollado por **Chakson** | Hecho con ❤️
 
 ## 📂 Estructura del Proyecto
 
+```text
 Colorfly-Studio/
 ├── 📄 index.html      # Estructura semántica (HTML5)
 ├── 🎨 styles.css      # Estilos y animaciones (CSS3)
