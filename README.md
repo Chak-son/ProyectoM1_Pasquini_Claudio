@@ -22,6 +22,16 @@ Para aprovechar al máximo **Colorfly Studio®**, sigue estos pasos:
 6. **Gestiona tus guardados:** Puedes eliminar paletas guardadas individualmente haciendo clic en el icono de la papelera (🗑️).
 
 ---
+### 🚀 Clonado rápido (vía Terminal)
+
+1. Abre tu terminal y clona el proyecto:
+   `git clone https://github.com/Chak-son/ProyectoM1_Pasquini_Claudio.git`
+
+2. Entra a la carpeta:
+   `cd ProyectoM1_Pasquini_Claudio`
+
+3. Abre el archivo `index.html` en tu navegador.
+
 ## ✨ Características Principales
 
 * **Generación Inteligente:** Crea paletas de 6, 8 o 9 colores con un solo clic.
