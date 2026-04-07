@@ -12,15 +12,16 @@ Desarrollado por **Chakson** | Hecho con ❤️
 ![Interfaz de Colorfly Studio](foto.png)
 
 ---
+
 ## 📂 Estructura del Proyecto
 
-```text
-Colorfly-Studio/
-├── 📄 index.html      # Estructura semántica (HTML5)
-├── 🎨 styles.css      # Estilos y animaciones (CSS3)
-├── ⚡ script.js      # Lógica y persistencia (JS ES6+)
-├── 📸 foto.png        # Imagen de previsualización
-└── 📖 README.md       # Documentación del proyecto
+**Colorfly-Studio/** ┣ 📄 **index.html** — Estructura semántica (HTML5)  
+┣ 🎨 **styles.css** — Estilos y animaciones (CSS3)  
+┣ ⚡ **script.js** — Lógica y persistencia (JS ES6+)  
+┣ 📸 **foto.png** — Imagen de previsualización  
+┗ 📖 **README.md** — Documentación del proyecto
+
+---
 
 ## 🛠️ Instrucciones de Uso
 
@@ -41,21 +42,19 @@ Tienes dos formas de tener este proyecto en tu computadora:
 ### Opción A: Descarga Directa (Más fácil)
 1. En la parte superior de este repositorio, haz clic en el botón verde **Code**.
 2. Selecciona **Download ZIP**.
-3. Extrae los archivos en una carpeta y abre el archivo index.html en tu navegador.
+3. Extrae los archivos en una carpeta y abre el archivo **index.html** en tu navegador.
 
 ### Opción B: Usando la Terminal (Requiere Git)
-Si eres desarrollador, puedes clonar el repositorio directamente usando este comando:
+Si eres desarrollador, puedes clonar el repositorio directamente usando este comando:  
 `git clone https://github.com/Chak-son/ProyectoM1_Pasquini_Claudio.git`
-
-Luego, simplemente abre el archivo index.html.
 
 ---
 
 ## ✨ Características y Tecnologías
 
 * **Código Semántico:** Desarrollado 100% sin etiquetas div, utilizando exclusivamente HTML5 semántico.
-* **Persistencia:** Uso de LocalStorage para que tus paletas guardadas no se borren.
-* **Diseño Responsive:** Organización visual inteligente (máximo 6 elementos por fila).
+* **Persistencia:** Uso de LocalStorage para que tus paletas guardadas no se borren al cerrar el navegador.
+* **Diseño Responsive:** Organización visual inteligente que se adapta a diferentes pantallas.
 * **Tecnologías:** HTML5, CSS3 (Flexbox y Animaciones) y JavaScript ES6+.
 
 ---
