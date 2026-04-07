@@ -16,6 +16,12 @@ header {
     display: flex; /* Alinea el círculo y el texto en fila */
     align-items: center; /* Centra verticalmente */
     gap: 10px; /* Espacio entre el círculo y el texto */
+    color: #333333; /* Gris oscuro */
+    font-family: 'Arial Black', Arial, sans-serif; /* Fuente del texto */
+    font-size: 1.5rem; /* Tamaño del texto */
+    margin: 0; /* Elimina el margen por defecto del h2 */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-weight: 900; /* Texto más grueso */
 }
 
 .circle {
@@ -25,13 +31,6 @@ header {
         red, orange, yellow, green, blue, indigo, violet); /* Colores del arcoíris */
     border-radius: 50%; /* Hace que el elemento sea un círculo */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave para resaltar */
-}
-
-.logo h2 {
-    font-family: 'Arial Black', Arial, sans-serif; /* Fuente del texto */
-    font-size: 1.5rem; /* Tamaño del texto */
-    color: #2c3e50; /* Color del texto */
-    margin: 0; /* Elimina el margen por defecto del h2 */
 }
 
 .divider {
