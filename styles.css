@@ -1,116 +1,144 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: left; /* Alineación a la izquierda */
     margin: 0;
     background: linear-gradient(270deg, #74ebd5, #ACB6E5);
+    min-height: 100vh;
 }
 
+/* --- Cabecera --- */
 header {
-    display: flex; /* Usamos flexbox para alinear el logo y la línea */
-    flex-direction: column; /* Colocamos en columna */
-    align-items: flex-start; /* Alineamos a la izquierda */
-    margin: 20px; /* Margen alrededor del header */
+    padding: 20px;
 }
 
 .logo {
-    display: flex; /* Alinea el círculo y el texto en fila */
-    align-items: center; /* Centra verticalmente */
-    gap: 10px; /* Espacio entre el círculo y el texto */
-    color: #333333; /* Gris oscuro */
-    font-family: 'Arial Black', Arial, sans-serif; /* Fuente del texto */
-    font-size: 1.5rem; /* Tamaño del texto */
-    margin: 0; /* Elimina el margen por defecto del h2 */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    font-weight: 900; /* Texto más grueso */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    font-family: 'Arial Black', sans-serif;
+    margin: 0;
+    font-weight: 900;
 }
 
 .circle {
-    width: 50px; /* Ancho del círculo */
-    height: 50px; /* Alto del círculo */
-    background: conic-gradient( 
-        red, orange, yellow, green, blue, indigo, violet); /* Colores del arcoíris */
-    border-radius: 50%; /* Hace que el elemento sea un círculo */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave para resaltar */
+    width: 50px;
+    height: 50px;
+    background: conic-gradient(red, orange, yellow, green, blue, indigo, violet);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .divider {
-    width: 100%; /* Ancho completo */
-    border: none; /* Sin borde */
-    border-top: 2px solid #2c3e50; /* Línea divisoria */
-    margin: 10px 0; /* Margen arriba y abajo */
+    border: none;
+    border-top: 2px solid #2c3e50;
+    margin: 10px 0;
 }
 
+/* --- Títulos --- */
 h1 {
     font-size: 2.5rem;
     color: #2c3e50;
+    text-align: center;
+    margin: 20px 0;
 }
 
+/* --- Controles (Lista de Radios) --- */
 .controls {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-#paletteSize {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+.instruction-text {
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.palette-size-container {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 5px 15px;
+    margin: 0;
+    background: #f0f4f8;
+    border-radius: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.palette-size-container input[type="radio"] {
+    display: none; /* Escondemos el circulito del radio */
+}
+
+.palette-size-container label {
+    padding: 8px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    color: #555;
+}
+
+.palette-size-container input[type="radio"]:checked + label {
+    background-color: #4a5673;
+    color: white;
 }
 
 #generateBtn {
-    padding: 10px 20px;
-    background-color: #74ebd5;
-    border: none;
-    border-radius: 4px;
+    background-color: #4a5673;
     color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 #generateBtn:hover {
-    background-color: #4db6ac;
+    background-color: #3b4560;
 }
 
+/* --- Paleta de Colores --- */
 .palette {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* Espacio entre círculos */
-    margin-top: 20px;
-    max-width: 600px; /* Ajustado para que entren 3 círculos más grandes */
-    margin-left: auto;
-    margin-right: auto;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
 }
 
 .color-container {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    padding: 10px;
 }
 
 .color-box {
-    width: 150px; /* Aumentar ancho del círculo */
-    height: 150px; /* Aumentar altura del círculo */
-    border-radius: 50%; /* Bordes redondeados */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .color-code {
     margin-top: 10px;
-    font-size: 16px;
     font-family: monospace;
-    color: #000000; /* Negro fuerte para hex */
-    text-align: center;
-    font-weight: 900; /* Letra bien ancha */
-    text-transform: uppercase; /* Convertir a mayúsculas */
+    font-weight: bold;
+    color: #333;
 }
 
 .color-code.hsl {
-    color: #777777; /* Gris suave para HSL */
-    text-transform: uppercase; /* Mayúsculas */
-    margin-top: 4px;
-    font-size: 14px;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #2c3e50;
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Colorfly Studio | Generador de Paletas de Colores</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Colorfly Studio | Generador de Paletas</title>
 </head>
 <body>
     <header>
@@ -12,24 +12,40 @@
             <span class="circle"></span>
             COLORFLY STUDIO
         </h2>
-        <hr class="divider"> <!-- Línea divisoria -->
+        <hr class="divider" />
     </header>
+
     <main>
         <h1>Generador de Paletas de Colores</h1>
+
         <section class="controls">
-            <label for="paletteSize">Selecciona el tamaño de la paleta:</label>
-            <select id="paletteSize">
-                <option value="6">6 colores</option>
-                <option value="8">8 colores</option>
-                <option value="9">9 colores</option>
-            </select>
+            <p class="instruction-text">Selecciona el tamaño de la paleta:</p>
+            
+            <ul class="palette-size-container">
+                <li>
+                    <input type="radio" id="size6" name="paletteSize" value="6" checked />
+                    <label for="size6">6</label>
+                </li>
+                <li>
+                    <input type="radio" id="size8" name="paletteSize" value="8" />
+                    <label for="size8">8</label>
+                </li>
+                <li>
+                    <input type="radio" id="size9" name="paletteSize" value="9" />
+                    <label for="size9">9</label>
+                </li>
+            </ul>
+
             <button id="generateBtn">Generar Paleta</button>
         </section>
+
         <section id="palette" class="palette"></section>
     </main>
+
     <footer>
         <p>© 2026 Colorfly Studio</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
