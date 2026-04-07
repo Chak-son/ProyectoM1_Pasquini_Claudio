@@ -1,12 +1,44 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: left; /* Alineación a la izquierda */
     margin: 0;
     background: linear-gradient(270deg, #74ebd5, #ACB6E5);
 }
 
 header {
-    margin: 20px 0;
+    display: flex; /* Usamos flexbox para alinear el logo y la línea */
+    flex-direction: column; /* Colocamos en columna */
+    align-items: flex-start; /* Alineamos a la izquierda */
+    margin: 20px; /* Margen alrededor del header */
+}
+
+.logo {
+    display: flex; /* Alinea el círculo y el texto en fila */
+    align-items: center; /* Centra verticalmente */
+    gap: 10px; /* Espacio entre el círculo y el texto */
+}
+
+.circle {
+    width: 50px; /* Ancho del círculo */
+    height: 50px; /* Alto del círculo */
+    background: conic-gradient( 
+        red, orange, yellow, green, blue, indigo, violet); /* Colores del arcoíris */
+    border-radius: 50%; /* Hace que el elemento sea un círculo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave para resaltar */
+}
+
+.logo h2 {
+    font-family: 'Arial Black', Arial, sans-serif; /* Fuente del texto */
+    font-size: 1.5rem; /* Tamaño del texto */
+    color: #2c3e50; /* Color del texto */
+    margin: 0; /* Elimina el margen por defecto del h2 */
+}
+
+.divider {
+    width: 100%; /* Ancho completo */
+    border: none; /* Sin borde */
+    border-top: 2px solid #2c3e50; /* Línea divisoria */
+    margin: 10px 0; /* Margen arriba y abajo */
 }
 
 h1 {
@@ -76,7 +108,6 @@ h1 {
     font-weight: 900; /* Letra bien ancha */
     text-transform: uppercase; /* Convertir a mayúsculas */
 }
-
 
 .color-code.hsl {
     color: #777777; /* Gris suave para HSL */
