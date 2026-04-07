@@ -22,15 +22,20 @@ Para aprovechar al máximo **Colorfly Studio®**, sigue estos pasos:
 6. **Gestiona tus guardados:** Puedes eliminar paletas guardadas individualmente haciendo clic en el icono de la papelera (🗑️).
 
 ---
-### 🚀 Clonado rápido (vía Terminal)
+## 💻 Cómo probarlo en tu PC
 
-1. Abre tu terminal y clona el proyecto:
-   `git clone https://github.com/Chak-son/ProyectoM1_Pasquini_Claudio.git`
+Tienes dos formas de tener **Colorfly Studio®** en tu computadora:
 
-2. Entra a la carpeta:
-   `cd ProyectoM1_Pasquini_Claudio`
+### Opción A: Descarga Directa (Más fácil)
+1. Haz clic en el botón verde **Code** arriba a la derecha.
+2. Selecciona **Download ZIP**.
+3. Extrae los archivos y abre `index.html` en tu navegador.
 
-3. Abre el archivo `index.html` en tu navegador.
+### Opción B: Usando la Terminal (Requiere Git instalado)
+Si eres desarrollador, puedes clonar el repositorio directamente:
+```bash
+git clone [https://github.com/Chak-son/ProyectoM1_Pasquini_Claudio.git](https://github.com/Chak-son/ProyectoM1_Pasquini_Claudio.git)
+cd ProyectoM1_Pasquini_Claudio
 
 ## ✨ Características Principales
 
