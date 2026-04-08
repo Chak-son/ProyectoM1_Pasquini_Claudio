@@ -1,6 +1,10 @@
 # 🎨 Colorfly Studio®
 
+<<<<<<< HEAD
 > **🌐 Ver Proyecto en Vivo:** [Probá la aplicación haciendo clic acá](https://chak-son.github.io/ProyectoM1_Pasquini_Claudio/)
+=======
+**🌐 Ver Proyecto en Vivo:** [Probá la aplicación haciendo clic acá](https://chak-son.github.io/ProyectoM1_Pasquini_Claudio/)
+>>>>>>> 38e4b90c9167e2ef1218f7e78149a99ada72ceb2
 
 **Colorfly Studio®** es una herramienta web moderna y minimalista para la generación de paletas de colores. Diseñada con un enfoque en la pureza del código y la experiencia de usuario, permite encontrar la combinación cromática perfecta en segundos.
 
@@ -81,4 +85,8 @@ Si eres desarrollador, puedes clonar el repositorio directamente usando este com
 ## ⚖️ Créditos
 **Colorfly Studio® 2026** - Todos los derechos reservados.
 
+<<<<<<< HEAD
 Diseño y desarrollo por **Chakson**.
+=======
+Diseño y desarrollo por **Chakson**.
+>>>>>>> 38e4b90c9167e2ef1218f7e78149a99ada72ceb2
