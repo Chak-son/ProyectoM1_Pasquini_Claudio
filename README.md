@@ -69,6 +69,15 @@ Si eres desarrollador, puedes clonar el repositorio directamente usando este com
 
 ---
 
+## 🚀 Próximas Mejoras
+* Exportación: Opción para descargar la paleta en formato PDF o imagen PNG.
+
+* Modo Contraste: Sistema de validación automática para asegurar que los colores generados cumplan con normas de accesibilidad (WCAG).
+
+* Temas Predeterminados: Filtros para generar paletas específicamente cálidas, frías o pasteles.
+
+---
+
 ## ⚖️ Créditos
 **Colorfly Studio® 2026** - Todos los derechos reservados.
 
