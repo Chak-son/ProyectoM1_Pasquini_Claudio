@@ -58,11 +58,11 @@ Si eres desarrollador, puedes clonar el repositorio directamente usando este com
 
 ## ✨ Características y Tecnologías
 
-* **Código Semántico: Desarrollado 100% sin etiquetas div, utilizando exclusivamente HTML5 semántico (header, main, section, article, aside, footer).
+*   Código Semántico: Desarrollado 100% sin etiquetas div, utilizando exclusivamente HTML5 semántico (header, main, section, article, aside, footer).
 * **Persistencia:** Uso de LocalStorage para que tus paletas guardadas no se borren al cerrar el navegador.
 * **Diseño Responsive:** Organización visual inteligente que se adapta a diferentes pantallas.
 * **Tecnologías:** HTML5, CSS3 (Flexbox y Animaciones) y JavaScript ES6+.
-* **Modo Dual: Soporte nativo para formatos HEX y HSL.
+*   Modo Dual: Soporte nativo para formatos HEX y HSL.
 
 ---
 
