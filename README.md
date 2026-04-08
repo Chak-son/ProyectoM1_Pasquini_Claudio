@@ -1,6 +1,6 @@
 # 🎨 Colorfly Studio®
 
-> **🌐 Ver Proyecto en Vivo:** [Probá la aplicación haciendo clic acá](https://chak-son.github.io/ProyectoM1_Pasquini_Claudio/)
+🌐 **Ver Proyecto en Vivo:** [Probá la aplicación haciendo clic acá](https://chak-son.github.io/ProyectoM1_Pasquini_Claudio/)
 
 **Colorfly Studio®** es una herramienta web moderna y minimalista para la generación de paletas de colores. Diseñada con un enfoque en la pureza del código y la experiencia de usuario, permite encontrar la combinación cromática perfecta en segundos.
 
@@ -34,6 +34,7 @@ Para aprovechar al máximo **Colorfly Studio®**, sigue estos pasos:
 
 * **Selecciona el tamaño:** Elige entre una paleta de 6, 8 o 9 colores usando los botones superiores.
 * **Genera colores:** Haz clic en el botón "Generar Paleta de Colores" para obtener una nueva combinación aleatoria.
+* **Cambia el Formato:** Usa el botón **HEX / HSL** para alternar instantáneamente la visualización de los códigos de color.
 * **Bloquea tus favoritos:** Haz clic en el icono del candado debajo del círculo. Ese color se mantendrá fijo aunque vuelvas a generar la paleta.
 * **Copia los códigos:** Haz clic directamente sobre el código HEX o HSL para copiarlo automáticamente a tu portapapeles.
 * **Guarda tu paleta:** Presiona "Guardar Paleta Actual". Podrás verla siempre en la sección inferior, incluso si refrescas la página.
@@ -57,10 +58,11 @@ Si eres desarrollador, puedes clonar el repositorio directamente usando este com
 
 ## ✨ Características y Tecnologías
 
-* **Código Semántico:** Desarrollado 100% sin etiquetas div, utilizando exclusivamente HTML5 semántico.
+* **Código Semántico: Desarrollado 100% sin etiquetas div, utilizando exclusivamente HTML5 semántico (header, main, section, article, aside, footer).
 * **Persistencia:** Uso de LocalStorage para que tus paletas guardadas no se borren al cerrar el navegador.
 * **Diseño Responsive:** Organización visual inteligente que se adapta a diferentes pantallas.
 * **Tecnologías:** HTML5, CSS3 (Flexbox y Animaciones) y JavaScript ES6+.
+* **Modo Dual: Soporte nativo para formatos HEX y HSL.
 
 ---
 
