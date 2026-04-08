@@ -120,3 +120,17 @@ window.borrarPaleta = (i) => {
 // Inicialización
 genBtn.onclick = dibujar;
 window.onload = () => { dibujar(); mostrarGuardados(); };
+
+// Seleccionamos el nuevo botón
+const toggleFormatBtn = document.getElementById('toggleFormatBtn');
+let esModoHSL = false; // Estado inicial
+
+toggleFormatBtn.onclick = () => {
+    esModoHSL = !esModoHSL; // Cambiamos el estado (true/false)
+
+    // Agregamos o quitamos la clase a la sección de la paleta
+    palette.classList.toggle('show-hsl');
+
+    // Cambiamos el texto del botón para que el usuario sepa qué sigue
+    toggleFormatBtn.textContent = 'HEX / HSL';
+};

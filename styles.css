@@ -87,8 +87,11 @@ h1 {
     color: white; 
 }
 
-#genBtn, #saveBtn { 
-    background: #4a5673; 
+/* --- 3. CONTROLES Y TÍTULOS --- */
+
+/* Estilos base para todos los botones principales */
+#genBtn, #saveBtn, #toggleFormatBtn { 
+    background: #4a5673; /* El color original de tu botón Generar */
     color: white; 
     border: none; 
     border-radius: 8px; 
@@ -96,14 +99,36 @@ h1 {
     font-weight: 700; 
     font-size: 1rem; 
     cursor: pointer; 
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-#saveBtn { background: #2c3e50; margin: 40px 0; }
+/* El botón de guardar es el único que mantenemos en azul oscuro para jerarquía */
+#saveBtn { 
+    background: #2c3e50; 
+    margin: 40px 0; 
+}
 
-#genBtn:hover, #saveBtn:hover { 
+/* Ajuste de margen para el botón de formato */
+#toggleFormatBtn { 
+    margin-left: 10px; 
+}
+
+#genBtn, #toggleFormatBtn {
+    min-width: 260.09px; /* Esto obliga a que ambos tengan al menos este ancho */
+    justify-content: center;
+}
+
+/* Efecto Hover unificado para todos */
+#genBtn:hover, #saveBtn:hover, #toggleFormatBtn:hover { 
     transform: translateY(-2px); 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0.9; /* Un pequeño cambio de brillo al pasar el mouse */
+}
+
+/* Efecto al hacer clic (opcional para feedback) */
+#genBtn:active, #toggleFormatBtn:active {
+    transform: translateY(0);
 }
 
 /* --- 4. PALETA (6 por línea) --- */
@@ -113,16 +138,20 @@ h1 {
     justify-content: center; 
     gap: 20px; 
     padding: 20px; 
-    /* 950px es el ancho ideal para que entren 6 círculos con sus gaps sin romperse */
     max-width: 950px; 
     margin: 0 auto; 
 }
+
+/* LÓGICA DE VISIBILIDAD DE CÓDIGOS */
+.hsl-code { display: none; } /* Oculto por defecto */
+
+.palette.show-hsl .hex-code { display: none; } /* Oculta HEX en modo HSL */
+.palette.show-hsl .hsl-code { display: block; } /* Muestra HSL en modo HSL */
 
 .color-card { 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    /* Definimos un ancho base para asegurar la fila de 6 */
     flex: 0 1 135px; 
     animation: fadeIn 0.5s ease forwards; 
 }
@@ -150,7 +179,7 @@ h1 {
 }
 
 .hex-code { margin-top: 12px; font-weight: 700; font-size: 1.1rem; }
-.hsl-code { color: #555; font-size: 0.8rem; margin-top: 4px; }
+.hsl-code { color: #333; font-weight: 700; font-size: 0.8rem; margin-top: 12px; }
 
 .hex-code:hover, .hsl-code:hover { background: rgba(255, 255, 255, 0.4); }
 
@@ -220,7 +249,7 @@ footer {
     padding: 60px 20px; 
     opacity: 0.8; 
     font-size: 0.9rem; 
-    line-height: 1.8; /* Un poquito más de espacio entre líneas */
+    line-height: 1.8; 
     color: #4a5673;
 }
 
@@ -231,7 +260,6 @@ footer strong {
     letter-spacing: 0.5px;
 }
 
-/* Estilo para el símbolo de marca registrada */
 footer p:first-of-type {
     font-weight: 700;
     letter-spacing: 1px;
