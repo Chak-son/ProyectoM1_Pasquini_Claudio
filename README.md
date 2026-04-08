@@ -1,52 +1,52 @@
-🎨 Colorfly Studio®
-🌐 Ver Proyecto en Vivo: Probá la aplicación haciendo clic acá
+# 🎨 Colorfly Studio®
 
-Colorfly Studio® es una herramienta web moderna y minimalista para la generación de paletas de colores. Diseñada con un enfoque en la pureza del código y la experiencia de usuario.
+🌐 **Ver Proyecto en Vivo:** [Probá la aplicación haciendo clic acá](https://chak-son.github.io/ProyectoM1_Pasquini_Claudio/)
 
-Desarrollado por Chakson | Hecho con ❤️
+**Colorfly Studio®** es una herramienta web moderna y minimalista para la generación de paletas de colores. Diseñada con un enfoque en la pureza del código y la experiencia de usuario, permite encontrar la combinación cromática perfecta en segundos.
 
-📸 Vista Previa
-📂 Estructura del Proyecto
-Plaintext
-ProyectoM1_Pasquini_Claudio/
-┣ 📁 imagenes/           
-┃ ┗ 📸 foto.png          — Recursos visuales
-┣ 📄 index.html          — Estructura semántica (HTML5)
-┣ 🎨 styles.css          — Estilos y animaciones (CSS3)
-┣ ⚡ script.js            — Lógica y persistencia (JS ES6+)
-┗ 📖 README.md           — Documentación del proyecto
-🛠️ Instrucciones de Uso
-Para aprovechar al máximo Colorfly Studio®, sigue estos pasos:
+Hecho con ❤️ por **Chakson**
 
-Selecciona el tamaño: Elige entre una paleta de 6, 8 o 9 colores.
+---
 
-Genera colores: Haz clic en el botón "Generar Paleta de Colores".
+### 📸 Vista Previa
+![Colorfly Studio Preview](foto.png)
 
-Cambia el Formato: Usa el botón HEX / HSL para alternar la visualización.
+---
 
-Bloquea tus favoritos: Haz clic en el icono del candado para fijar un color.
+### 📂 Estructura del Proyecto
 
-Copia los códigos: Haz clic sobre el código para copiarlo al portapapeles.
+- 📁 `Colorfly-Studio/`
+  - 📄 `index.html` — Estructura semántica (HTML5)
+  - 🎨 `styles.css` — Estilos y animaciones (CSS3)
+  - ⚡ `script.js` — Lógica y persistencia (JS ES6+)
+  - 📸 `foto.png` — Imagen de previsualización
+  - 📖 `README.md` — Documentación del proyecto
 
-Guarda tu paleta: Presiona "Guardar Paleta Actual".
+---
 
-💻 Cómo probarlo en tu PC
-Opción A: Descarga Directa
-En el botón verde Code, selecciona Download ZIP.
+### 🛠️ Instrucciones de Uso
 
-Extrae y abre el archivo index.html.
+Para aprovechar al máximo **Colorfly Studio®**, sigue estos pasos:
 
-Opción B: Usando la Terminal
-Bash
-git clone https://github.com/Chak-son/ProyectoM1_Pasquini_Claudio.git
-✨ Características y Tecnologías
-Código Semántico: HTML5 puro sin etiquetas div.
+1.  **Selecciona el tamaño:** Elige entre una paleta de 6, 8 o 9 colores usando los botones superiores.
+2.  **Genera colores:** Haz clic en el botón "Generar Paleta de Colores" para obtener una nueva combinación aleatoria.
+3.  **Cambia el Formato:** Usa el botón **HEX / HSL** para alternar instantáneamente la visualización de los códigos de color.
+4.  **Bloquea tus favoritos:** Haz clic en el icono del candado debajo del círculo. Ese color se mantendrá fijo aunque vuelvas a generar la paleta.
+5.  **Copia los códigos:** Haz clic directamente sobre el código (HEX o HSL) para copiarlo automáticamente a tu portapapeles.
+6.  **Guarda tu paleta:** Presiona "Guardar Paleta Actual". Podrás verla siempre en la sección inferior, incluso si refrescas la página.
 
-Modo Dual: Soporte para HEX y HSL.
+---
 
-Persistencia: Uso de LocalStorage.
+### 💻 Cómo probarlo en tu PC
 
-Tecnologías: HTML5, CSS3 y JS ES6+.
+Tienes dos formas de tener este proyecto en tu computadora:
 
-⚖️ Créditos
-Colorfly Studio® 2026 - Diseño y desarrollo por Chakson.
+#### Opción A: Descarga Directa (Más fácil)
+1.  En la parte superior de este repositorio, haz clic en el botón verde **Code**.
+2.  Selecciona **Download ZIP**.
+3.  Extrae los archivos en una carpeta y abre el archivo `index.html` en tu navegador.
+
+#### Opción B: Usando la Terminal (Requiere Git)
+Si eres desarrollador, puedes clonar el repositorio directamente usando este comando:
+```bash
+git clone [https://github.com/Chak-son/ProyectoM1_Pasquini_Claudio.git](https://github.com/Chak-son/ProyectoM1_Pasquini_Claudio.git)
