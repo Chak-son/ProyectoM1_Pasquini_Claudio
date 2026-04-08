@@ -84,9 +84,4 @@ Si eres desarrollador, puedes clonar el repositorio directamente usando este com
 
 ## ⚖️ Créditos
 **Colorfly Studio® 2026** - Todos los derechos reservados.
-
-<<<<<<< HEAD
 Diseño y desarrollo por **Chakson**.
-=======
-Diseño y desarrollo por **Chakson**.
->>>>>>> 38e4b90c9167e2ef1218f7e78149a99ada72ceb2
