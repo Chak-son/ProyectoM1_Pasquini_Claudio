@@ -6,6 +6,8 @@
 
 **Ver Proyecto en Vivo:** [Probá la aplicación haciendo clic acá](https://chak-son.github.io/ProyectoM1_Pasquini_Claudio/)
 
+Informe de Proyecto: Colorfly Studio ®: https://docs.google.com/document/d/1bXMjgWy1JWdJtOfqnqgEVW8rw1D649loe4Ve0vS-v-Q/edit?usp=sharing
+
 **Colorfly Studio®** es una herramienta web moderna y minimalista para la generación de paletas de colores. Diseñada con un enfoque en la pureza del código y la experiencia de usuario, permite encontrar la combinación cromática perfecta en segundos.
 
 Desarrollado por **Chakson** | Hecho con ❤️
